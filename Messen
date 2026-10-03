@@ -1,1 +1,14 @@
-
+import numpy as np
+import pandas as p
+import pandas as pd
+file = 'messen.csv'
+extr = pd.read_csv(file)
+df = extr['messen']
+if df.empty:
+    print('No data found')
+else:
+    min = np.min(df)
+    max = np.max(df)
+    mean = np.mean(df)
+    std = np.std(df)
+    print(min,max,mean,std)
